@@ -1,0 +1,56 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="stu_MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>学生科技作品展示平台</title>
+    <link href="css.css" type="text/css" rel="Stylesheet" />
+ 
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div align="center">
+    <table width="980" border="0" cellspacing="2" cellpadding="5" class="admin_top" align="center">
+  <tr>
+    <td>学生科技作品展示平台学生端</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;">欢迎您：<%=strusername %>&nbsp;登录成功！您的学号：<%=strusernumber %>&nbsp;<a href ="loginout.aspx" onclick="javascript:return confirm('确定退出吗？')" class="blue">退出</a></td>
+  </tr>
+</table>
+<table width="980" border="0" cellspacing="2" cellpadding="5" style="text-align:center;">
+  <tr>
+    <td width="200" valign="top" class="admin_top">
+    <a href ="index.aspx" class="blue">后台首页</a><br />
+       <a href ="WorkPerson.aspx?action=add" class="blue">添加个人学生作品</a>
+        <br />
+       <a href ="person.aspx" class="blue">个人信息管理</a>
+        <br />
+           <a href ="AddWorkPersonList.aspx" class="blue">查看个人作品</a>
+        <br />
+        <a href ="WorkTuanDui.aspx?action=add" class="blue">添加团队学生作品</a>
+        <br />
+        <a href ="WorkTuanDuiList.aspx" class="blue">查看团队学生作品</a>
+        <br />
+      </td>
+    <td width="755" valign="top"><asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder></td>
+  </tr>
+</table>
+        <table width="980" border="0" cellspacing="2" cellpadding="5" class="admin_top" align="center">
+  <tr>
+    <td>网上作业网上展示平台学生端</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;">版权所有&copy;CopyRight2015</td>
+  </tr>
+</table>
+    </div>
+    </form>
+    
+</body>
+</html>
